@@ -29,3 +29,5 @@ Result will look like this:
 ![Prediction Result](Image/prediction.png)
 
 The output will show the predicted class for the input image (cat/dog).
+
+This is the report for this exercise [Exercise 1 Report](Exercise1.pdf)
