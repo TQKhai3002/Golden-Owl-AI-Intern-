@@ -64,10 +64,10 @@ if args.image:
     prediction = vgg_model(image)  
     predicted_class = prediction.argmax(dim=1).item()
     if (predicted_class == 0):
-        print("Predicted class: Cat")
+        print("cat")
         class_label = "Cat"
     else:
-        print("Predicted class: Dog")
+        print("dog")
         class_label = "Dog"
     # Display the image with the predicted class
     image = cv2.imread(image_path)

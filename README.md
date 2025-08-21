@@ -21,4 +21,6 @@ Replace `<path_to_your_image>` with the actual path to the image you want to cla
 
 Result will look like this:
 
-![Prediction Result](Image/prediction.jpg)
+![Prediction Result](Image/prediction.png)
+
+The output will show the predicted class for the input image (cat/dog).
