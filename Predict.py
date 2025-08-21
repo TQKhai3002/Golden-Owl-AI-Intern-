@@ -1,22 +1,11 @@
 import torch
-import torchvision
 import torch.nn as nn
-import torch.optim as optim
-from torch.utils.data import Dataset, DataLoader, random_split
 import torchvision.transforms as transforms
 from torchvision import  models
-from tqdm import tqdm
-from PIL import Image
 import cv2
-import numpy as np
 import matplotlib.pyplot as plt
-import os
-import logging
-import csv
-import pandas as pd
 import matplotlib.pyplot as plt
 import argparse
-from flask import Flask, request, jsonify, render_template
 parser = argparse.ArgumentParser(description="A script for dog cat classification.")
 parser.add_argument("-i", "--image", type=str, help="Path to the input image")
 args = parser.parse_args()
