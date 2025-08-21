@@ -1,0 +1,24 @@
+# Vision AI Intern Assignment
+
+## Exercise 1
+
+This is the code for training and testing a dog and cat classification model
+
+### Installation
+
+Please install the required packages by running the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
+To run predictions, you can use the following command:
+
+```bash
+python Predict.py  -i <path_to_your_image>
+```
+Replace `<path_to_your_image>` with the actual path to the image you want to classify. The model will output the predicted class for the image.
+
+Result will look like this:
+
+![Prediction Result](Image/prediction.jpg)
