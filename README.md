@@ -5,6 +5,11 @@
 This is the code for training and testing a dog and cat classification model
 
 ### Installation
+You can clone this repository using the following command:
+
+```bash
+git clone https://github.com/TQKhai3002/Golden-Owl-AI-Intern-
+```
 
 Please install the required packages by running the following command:
 
