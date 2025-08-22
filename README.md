@@ -26,9 +26,9 @@ pip install -r requirements.txt
 To run predictions, you can use the following command:
 
 ```bash
-python Predict.py  -i <path_to_your_image>
+python Predict.py  -i <path_to_your_image> -v <path_to_your_vgg_weights> -vis show
 ```
-Replace `<path_to_your_image>` with the actual path to the image you want to classify. The model will output the predicted class for the image.
+Replace `<path_to_your_image>` with the actual path to the image you want to classify. `<path_to_your_vgg_weights>` with the actual path to the VGG weights file. You can set the visualization option to "show" to display the image with the predicted class or it will be "None" by default.
 
 Result will look like this:
 

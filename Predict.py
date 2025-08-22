@@ -6,12 +6,15 @@ import cv2
 import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 import argparse
+import warnings
 parser = argparse.ArgumentParser(description="A script for dog cat classification.")
 parser.add_argument("-i", "--image", type=str, help="Path to the input image")
+parser.add_argument("-v", type=str, help="Path to the VGG model weights", default="./vgg19_trained.pth")
+parser.add_argument("-vis", type=str, help="Visualization option", default="none")
 args = parser.parse_args()
-VGG_WEIGHTS_PATH = "./vgg19_trained.pth"
+VGG_WEIGHTS_PATH = args.v
 
-
+warnings.filterwarnings('ignore')
 def get_vgg19_model(num_classes=2, freeze_features=True):
     # Load pre-trained VGG19
     model = models.vgg19(weights=models.VGG19_Weights.IMAGENET1K_V1)
@@ -59,17 +62,18 @@ if args.image:
         print("dog")
         class_label = "Dog"
     # Display the image with the predicted class
-    image = cv2.imread(image_path)
-    image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    if args.vis == "show":
+        image = cv2.imread(image_path)
+        image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-    plt.figure(figsize=(10, 10))  
+        plt.figure(figsize=(10, 10))  
 
-    plt.imshow(image_rgb)
-    plt.axis('off') 
+        plt.imshow(image_rgb)
+        plt.axis('off') 
 
-    plt.text(10, 30, f"Predicted: {class_label}", 
-            fontsize=20, 
-            color='red',  
-            fontweight='bold',  
-            bbox=dict(facecolor='white', alpha=0.8, edgecolor='none'))  
-    plt.show()
+        plt.text(10, 30, f"Predicted: {class_label}", 
+                fontsize=20, 
+                color='red',  
+                fontweight='bold',  
+                bbox=dict(facecolor='white', alpha=0.8, edgecolor='none'))  
+        plt.show()
