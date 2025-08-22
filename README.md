@@ -37,3 +37,6 @@ Result will look like this:
 The output will show the predicted class for the input image (cat/dog).
 
 This is the report for this exercise [Exercise 1 Report](Exercise1.pdf)
+
+## Exercise 2
+This is the report for this exercise [Exercise 2 Report](Exercise2.pdf)
