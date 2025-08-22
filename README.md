@@ -11,6 +11,12 @@ You can clone this repository using the following command:
 git clone https://github.com/TQKhai3002/Golden-Owl-AI-Intern-
 ```
 
+Download the `vgg19_trained.pth` file to the project directory by running the `download.py` script:
+
+```bash
+python download.py
+```
+
 Please install the required packages by running the following command:
 
 ```bash
