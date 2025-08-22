@@ -9,7 +9,7 @@ import argparse
 parser = argparse.ArgumentParser(description="A script for dog cat classification.")
 parser.add_argument("-i", "--image", type=str, help="Path to the input image")
 args = parser.parse_args()
-VGG_WEIGHTS_PATH = "C:\\Users\\ADMIN\\Downloads\\vgg19_trained.pth"
+VGG_WEIGHTS_PATH = "./vgg19_trained.pth"
 
 
 def get_vgg19_model(num_classes=2, freeze_features=True):
